@@ -5,8 +5,8 @@
 using namespace std;
 
 class User {
-    static int nextkey;
-    int key;
+    static int nextkey; // incremented each time a new user is created
+    int key; // acts as the index for the adjacency matrix
     string username;
 
 public:
@@ -16,6 +16,7 @@ public:
     // Getter methods
     int getKey() const;
     string getUsername() const;
+    
     // Override << for printing User objects
     friend std::ostream& operator<<(std::ostream& out, const User& user);
 };

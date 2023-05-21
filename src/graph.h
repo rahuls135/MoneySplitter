@@ -6,6 +6,11 @@
 #include "user.h"
 using namespace std;
 
+/**
+ * Keys in the AM are the indices for users vector
+ * adjacencyMatrix[source][destination] is the amount of money that source owes users
+ * adjacencyMatrix[source][destination] and adjacencyMatrix[destination][source] both cannot be > 0
+ */
 class Graph {
     vector<User> users;
     vector<vector<double>> adjacencyMatrix;
@@ -26,6 +31,7 @@ public:
     // Print the adjacency matrix
     void printAdjacencyMatrix() const;
 
+    // Print the balances between users
     void printBalances() const;
 };
 

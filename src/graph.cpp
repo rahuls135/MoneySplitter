@@ -55,7 +55,7 @@ double Graph::getWeight(const User& source, const User& destination) const {
         return adjacencyMatrix[sourceIndex][destinationIndex];
     } else {
         cout << "One or both users do not exist in the graph." << endl;
-        return 0.0;
+        return -1; // Any user not found
     }
 }
 
